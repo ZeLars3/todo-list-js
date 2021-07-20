@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin:10 auto;
     
@@ -12,6 +16,7 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #be1b1b;
+    text-transform: uppercase;
 }
 
 .header {
@@ -23,8 +28,15 @@ body {
     margin-bottom: 10px;
 }
 
+.line {
+    width:100%;
+    background-color: #d64b4b;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
 .input {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
     border: 1px solid #be1b1b;
     border-radius: 5px;
@@ -32,9 +44,48 @@ body {
     margin-bottom: 10px;
 }
 
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    list-style: circle; 
+}
+  
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+  
+ul li:hover {
+    background: #ddd;
+}
+  
+  
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+  
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
 .add-button {
     cursor: pointer;
     transition: all 0.3s;
+    width: 20px;
+    height:20px;
 }
 
 .add-button:hover {
